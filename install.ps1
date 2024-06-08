@@ -41,7 +41,7 @@ foreach ($directory in $directories) {
 
 # Fetches the latest version of the modpack
 Write-Host "Fetching latest version of the modpack..." -ForegroundColor $defaultTextColor
-$jsonResponse = Invoke-WebRequest -Uri "https://eftomega.deno.dev/"
+$jsonResponse = Invoke-WebRequest -Uri "https://eftomega.deno.dev/modpack.json"
 
 # Converts the JSON response to a PowerShell object
 $modpack = $jsonResponse.Content | ConvertFrom-Json
