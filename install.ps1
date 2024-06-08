@@ -39,47 +39,26 @@ foreach ($directory in $directories) {
   }
 }
 
+# Fetches the latest version of the modpack
+Write-Host "Fetching latest version of the modpack..." -ForegroundColor $defaultTextColor
+$jsonResponse = Invoke-WebRequest -Uri "https://eftomega.deno.dev/"
+
+# Converts the JSON response to a PowerShell object
+$modpack = $jsonResponse.Content | ConvertFrom-Json
+
+# Display the modpack version
+Write-Host "Modpack version: $($modpack.version)" -ForegroundColor Yellow
+
 # List of mod urls
-$urls = @(
-  "https://github.com/DeadLeavez/Leaves-BarterEconomy/releases/download/1.0.5/leaves-bartereconomy.zip",
-  "https://dev.sp-tarkov.com/Leaves/mods/releases/download/IOF/InventoryOrganizingFeatures.dll",
-  "https://github.com/WelcomeToTarkov/PackNStrap/releases/download/Release/WTT-PackNStrap.rar",
-  "https://github.com/space-commits/SPT-Realism-Mod-Client/releases/download/v1.2.2/Realism-Mod-v1.2.2-SPT-v3.8.3.zip",
-  "https://github.com/WelcomeToTarkov/LittleDrummerBoy/releases/download/Release/WTT-LittleDrummerBoy.rar",
-  "https://github.com/Amands2Mello/AmandsGraphics/releases/download/1.6.2/AmandsGraphics.1.6.2.zip",
-  "https://github.com/p-kossa/nookys-swag-presets-spt/releases/download/v3.3.5/SWAG-Donuts-v3.3.5-SPT380.zip",
-  "https://github.com/Solarint/SAIN/releases/download/2.3.3/SAIN-2.3.3-Release.7z",
-  "https://github.com/Skwizzy/SPT-LootingBots/releases/download/v1.3.2-aki-3.8.0/Skwizzy-LootingBots-1.3.2.zip",
-  "https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.6.0/DanW-SPTQuestingBots.zip",
-  "https://github.com/CJ-SPT/StashSearch/releases/download/V1.1.1/StashSearch.7z"
-)
-
-$googledriveurls = @{
-  "ServerValueModifier1.8.3.zip" = "https://drive.google.com/uc?export=download&id=1hijGHUYpeLm8vPoPmX2JlGrp6h9JlzXB"
-}
-
+$urls = $modpack.urls
+# List of Google Drive mod urls
+$googledriveurls = $modpack.googleDriveUrls
 # List of mods with standard folder structure
-$standardFolderStructure = @(
-  "AmandsGraphics.1.6.2.zip",
-  "DanW-SPTQuestingBots.zip"
-  "leaves-bartereconomy.zip",
-  "Realism-Mod-v1.2.2-SPT-v3.8.3.zip",
-  "SAIN-2.3.3-Release.7z",
-  "Skwizzy-LootingBots-1.3.2.zip",
-  "StashSearch.7z",
-  "WTT-PackNStrap.rar",
-  "WTT-LittleDrummerBoy.rar",
-  "SWAG-Donuts-v3.3.5-SPT380.zip"
-)
-
-$userMods = @(
-  "ServerValueModifier1.8.3.zip"
-)
-
+$standardFolderStructure = $modpack.standardFolderStructure
+# List of user mods
+$userMods = $modpack.userMods
 # List of mods that are only DLLs
-$dllOnlyMods = @(
-  "InventoryOrganizingFeatures.dll"
-)
+$dllOnlyMods = $modpack.dllOnlyMods
 
 # Downloads all the mods in the mod url list
 Write-Host "Downloading mods..." -ForegroundColor $defaultTextColor
@@ -96,15 +75,15 @@ foreach ($url in $urls) {
 
 # Downloads all the mods in the googledrive url list
 Write-Host "Downloading mods from Google Drive..." -ForegroundColor $defaultTextColor
-foreach ($url in $googledriveurls.GetEnumerator()) {
-  $leaf = $url.Key;
+foreach ($url in $googledriveurls.Keys) {
+  $leaf = $url
   # if mod is already downloaded, skip
   if (Test-Path "./downloads/$($leaf)") {
     Write-Host "$($leaf) already downloaded. Skipping..." -ForegroundColor Yellow
     continue
   }
   Write-Host "Downloading $($leaf)..." -ForegroundColor $defaultTextColor
-  Invoke-WebRequest -Uri $url.Value -OutFile  "./downloads/$($leaf)"
+  Invoke-WebRequest -Uri $googledriveurls[$url] -OutFile  "./downloads/$($leaf)"
 }
 
 # Extracts all the mods with standard folder structure
