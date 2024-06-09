@@ -1,3 +1,5 @@
 /downloads/
 /SPT/
 /mods/*/node_modules/
+/mods/*/dist/*
+!/mods/*/dist/*.zip
