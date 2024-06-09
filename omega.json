@@ -47,5 +47,6 @@
     "leaves-bartereconomy",
     "ServerValueModifier",
     "ybabts-stackable-items"
-  ]
+  ],
+  "configFileUrls": []
 }

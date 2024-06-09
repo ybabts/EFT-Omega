@@ -62,6 +62,8 @@ $userMods = $modpack.userMods
 $dllOnlyMods = $modpack.dllOnlyMods
 # Mod order list
 $modOrder = $modpack.modOrder
+# Config files list
+$configFileUrls = $modpack.configFileUrls
 
 # Downloads all the mods in the mod url list
 Write-Host "Downloading mods..." -ForegroundColor $defaultTextColor
@@ -109,8 +111,17 @@ foreach ($dll in $dllOnlyMods) {
   Move-Item -Path "./downloads/$dll" -Destination "./SPT/BepInEx/plugins" -Force
 }
 
+# Creates the mod order file
+Write-Host "Creating mod order file..." -ForegroundColor $defaultTextColor
+$order = @{"order" = $modOrder}
+$orderJson = $order | ConvertTo-Json
+
+$stream = New-Object System.IO.StreamWriter("./SPT/user/mods/order.json", $false, [System.Text.Encoding]::UTF8)
+$stream.WriteLine($orderJson)
+$stream.Close()
+
 # Asks the user where their SPT folder is located
-Write-Host "Please select your SPT folder..." -ForegroundColor Yellow
+Write-Host "Please select your SPT folder..." -ForegroundColor Green
 Add-Type -AssemblyName System.Windows.Forms
 
 $folderBrowser = New-Object System.Windows.Forms.FolderBrowserDialog
