@@ -16,10 +16,25 @@
     "https://eftomega.deno.dev/mods/ybabts-bettersecurecontainerprogression-1.0.0.zip",
     "https://github.com/KillerDJLang/Onyx-Secure-Container/releases/download/v1.3.2/Onyx.7z",
     "https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.4.3/DrakiaXYZ-Waypoints-1.4.3.7z",
-    "https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/0.4.0/DrakiaXYZ-BigBrain-0.4.0_3.8.0.7z"
+    "https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/0.4.0/DrakiaXYZ-BigBrain-0.4.0_3.8.0.7z",
+    "https://github.com/project-fika/Fika-Plugin/releases/download/v0.9.8910.17192/Fika.Release.0.9.8910.17192.zip",
+    "https://github.com/space-commits/SPT-FOV-Fix/releases/download/v1.2.0/Fontaine-FOV-Fix-v1.2.0-SPT-v3.8.3.zip",
+    "https://github.com/WelcomeToTarkov/UpInSmoke/releases/download/Release/WTT-UpInSmoke.rar",
+    "https://github.com/GrooveypenguinX/HeadVoiceSelector/releases/download/1.03/WTT-HeadVoiceSelector.rar",
+    "https://github.com/DrakiaXYZ/SPT-TaskListFixes/releases/download/1.4.0/DrakiaXYZ-TaskListFixes-1.4.0.7z",
+    "https://github.com/Soulztorm/Wara-ModdingStatsHelper/releases/download/1.0.3/Wara-ModdingStatsHelper-1.0.3.zip"
   ],
   "googleDriveUrls": {
-    "ServerValueModifier1.8.3.zip": "https://drive.google.com/uc?export=download&id=1hijGHUYpeLm8vPoPmX2JlGrp6h9JlzXB"
+    "ServerValueModifier1.8.3.zip": "https://drive.google.com/uc?export=download&id=1hijGHUYpeLm8vPoPmX2JlGrp6h9JlzXB",
+    "BRNVG-1.5.3_updatedFixed.zip": "https://drive.usercontent.google.com/download?id=1-OBJbhDEEwdhBDEj0hYpShioxbGYYaK4&export=download&authuser=0&confirm=t&uuid=6378b828-c890-48a3-b21a-b001d2d664b6&at=APZUnTWZeQ68UaR-gZ-spwT81fB7%3A1717916620467",
+    "BBRTP-1.03.zip": "https://drive.usercontent.google.com/download?id=1APu5xCMMB4UfeS6ks1gzg556vKfQByjt&export=download&authuser=0&confirm=t&uuid=41fc04e9-176a-495d-98c0-447d82a6edeb&at=APZUnTUEzlJJpkkSGa-9ejCUGM3D%3A1717916910748",
+    "WTT-SianydeAndScorpiness.zip": "https://drive.usercontent.google.com/download?id=1BdPWh_lwcyW7gV7cPWGm5Ujmylg4hRSA&export=download&authuser=0&confirm=t&uuid=e8e99bbb-a4f1-4663-b276-0527fd2399b3&at=APZUnTWkYiEYdiOjvBXMsdLsVkxG%3A1717917214434",
+    "WTT-SianydeAndACRiness.zip": "https://drive.usercontent.google.com/download?id=1JvPWAAdyKvBu1CXmybGFEm35hUcC5Rju&export=download&authuser=0&confirm=t&uuid=31705f2d-7e2c-4afe-aa16-396796b59f3d&at=APZUnTUeI2k7uV_WiQAWRIKourxa%3A1717917856630",
+    "WTT-SianydeAndG3iness.zip": "https://drive.usercontent.google.com/download?id=1Jcb-wSHxJs3ZzISIaK4Z42Wa9a3N4dVl&export=download&authuser=0&confirm=t&uuid=c9181916-8530-42d8-b457-0570c1dd628e&at=APZUnTXJ4niFNjWNJvwMbRkNHH-9%3A1717918044810",
+    "WTT-Armory-HK417.zip": "https://drive.usercontent.google.com/download?id=11_Dl047nhN8mcLBWSxgSmjoRIFMvk9IM&export=download&authuser=0&confirm=t&uuid=0bad5d81-479b-40b9-a20b-19788b6bb1f2&at=APZUnTUszRqnzgfy2MavrkpICORA%3A1717918204101",
+    "WTT-Armory-WilsonCombat.zip": "https://drive.usercontent.google.com/download?id=11CZBDUe3xiLbGfJ7sJKCOQQ9DOfDOD5k&export=download&authuser=0",
+    "WTT-Armory-SVD.zip": "https://drive.usercontent.google.com/download?id=1SAm1dYBIf5hFcZan78o75ryBqyVeQWGy&export=download&authuser=0&confirm=t&uuid=ac7f521f-56c9-40e9-b566-cb9e48425e9c&at=APZUnTWzlG_ILVqN_io2oiXITzfR%3A1717918906295",
+    "CactusPie.RamCleanerInterval.dll": "https://drive.usercontent.google.com/download?id=1xT0bdTeJJc5AdFdrnlQCr9YULTbs2afO&export=download&authuser=0"
   },
   "standardFolderStructure": [
     "AmandsGraphics.1.6.2.zip",
@@ -36,13 +51,28 @@
     "Onyx.7z",
     "ybabts-bettersecurecontainerprogression-1.0.0.zip",
     "DrakiaXYZ-Waypoints-1.4.3.7z",
-    "DrakiaXYZ-BigBrain-0.4.0_3.8.0.7z"
+    "DrakiaXYZ-BigBrain-0.4.0_3.8.0.7z",
+    "Fika.Release.0.9.8910.17192.zip",
+    "BRNVG-1.5.3_updatedFixed.zip",
+    "BBRTP-1.03.zip",
+    "Fontaine-FOV-Fix-v1.2.0-SPT-v3.8.3.zip",
+    "WTT-SianydeAndScorpiness.zip",
+    "WTT-SianydeAndACRiness.zip",
+    "WTT-SianydeAndG3iness.zip",
+    "WTT-Armory-HK417.zip",
+    "WTT-Armory-WilsonCombat.zip",
+    "WTT-Armory-SVD.zip",
+    "WTT-UpInSmoke.rar",
+    "WTT-HeadVoiceSelector.rar",
+    "DrakiaXYZ-TaskListFixes-1.4.0.7z",
+    "Wara-ModdingStatsHelper-1.0.3.zip"
   ],
   "userMods": [
     "ServerValueModifier1.8.3.zip"
   ],
   "dllOnlyMods": [
-    "InventoryOrganizingFeatures.dll"
+    "InventoryOrganizingFeatures.dll",
+    "CactusPie.RamCleanerInterval.dll"
   ],
   "modOrder": [
     "DrakiaXYZ-Waypoints",
@@ -52,10 +82,21 @@
     "SWAG",
     "Skwizzy-NoDiscardLimit",
     "DanW-SPTQuestingBots",
+    "Fontaine-FOV-Fix",
+    "BRNVG_N-15Adapter",
+    "Realistic-Thermals-1.0.3",
+    "WTT-UpInSmoke",
     "WTT-LittleDrummerBoy",
+    "WTT-SianydeAndScorpiness",
+    "WTT-SianydeAndACRiness",
+    "WTT-SianydeAndG3iness",
+    "WTT-Armory-HK417",
+    "WTT-Armory-WilsonCombat",
+    "WTT-Armory-SVD",
     "WTT-PackNStrap",
     "leaves-bartereconomy",
     "ServerValueModifier",
+    "WTT-HeadVoiceSelector",
     "OnyxContainer",
     "ybabts-stackableitems",
     "ybabts-bettersecurecontainerprogression"

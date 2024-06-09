@@ -46,7 +46,7 @@
   "disable_flea_blacklist": false,
   "no_fall_damage": false,
   "logEverything": false,
-  "force_boss_items": false,
+  "force_boss_items": true,
   "revert_hp": false,
   "headset_changes": true,
   "trader_repair_changes": true,
@@ -76,7 +76,7 @@
   "standard_bot_hp_multi": 1.0,
   "mid_bot_hp_multi": 1.0,
   "boss_bot_hp_multi": 1.0,
-  "player_hp_multi": 1.15,
+  "player_hp_multi": 1.14,
   "botTierOdds1": [
     90,
     7,
