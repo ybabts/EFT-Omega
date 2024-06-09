@@ -1,5 +1,5 @@
 $server = "https://eftomega.deno.dev"
-$server = "http://localhost:8000"
+# $server = "http://localhost:8000"
 
 $defaultTextColor = [System.ConsoleColor]::White
 $ProgressPreference = 'SilentlyContinue' # Suppress progress bar  
@@ -79,7 +79,8 @@ Write-Host "Modpack version: $($modpack.version)" -ForegroundColor Yellow
 # List of mod urls
 $urls = $modpack.urls
 # List of Google Drive mod urls
-$googledriveurls = $modpack.googleDriveUrls
+$googledriveurls = @{}
+$modpack.googleDriveUrls.PSObject.Properties | ForEach-Object { $googledriveurls[$_.Name] = $_.Value }
 # List of mods with standard folder structure
 $standardFolderStructure = $modpack.standardFolderStructure
 # List of user mods
@@ -89,7 +90,8 @@ $dllOnlyMods = $modpack.dllOnlyMods
 # Mod order list
 $modOrder = $modpack.modOrder
 # Config files list
-$config = $modpack.config
+$config = @{}
+$modpack.config.PSObject.Properties | ForEach-Object { $config[$_.Name] = $_.Value }
 
 # Downloads all the mods in the mod url list
 Write-Host "Downloading mods..." -ForegroundColor $defaultTextColor
