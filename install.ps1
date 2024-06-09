@@ -151,7 +151,8 @@ Write-Host "Downloading config files..." -ForegroundColor $defaultTextColor
 foreach ($configFile in $config.Keys) {
   $configUrl = $config[$configFile]
   $configPath = Join-Path -Path "./SPT" -ChildPath $configFile
-  Write-Host "Downloading $configFile..." -ForegroundColor $defaultTextColor
+  $leaf = Split-Path -Leaf $url
+  Write-Host "Downloading $($leaf)..." -ForegroundColor $defaultTextColor
   Invoke-WebRequest -Uri $configUrl -OutFile $configPath
 }
 
