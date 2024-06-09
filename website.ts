@@ -36,5 +36,14 @@ Deno.serve((req: Request) => {
       return new Response("Mod does not exist", { status: 404 });
     }
   }
+  if (url.pathname.startsWith("/config/")) {
+    const configname = url.pathname.slice(8);
+    const configFilePath = `./config/${configname}`;
+    if (existsSync(configFilePath)) {
+      return new Response(Deno.readFileSync(configFilePath), { headers: { "Content-Type": "application/json" } });
+    } else {
+      return new Response("Config does not exist", { status: 404 });
+    }
+  }
   return new Response("Not found", { status: 404 })
 })

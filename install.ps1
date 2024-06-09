@@ -1,5 +1,16 @@
+$server = "https://eftomega.deno.dev"
+$server = "http://localhost:8000"
+
 $defaultTextColor = [System.ConsoleColor]::White
 $ProgressPreference = 'SilentlyContinue' # Suppress progress bar  
+
+Write-Host ""
+Write-Host "---------------------------------------------" -ForegroundColor Green
+Write-Host "EFT Omega Modpack installer created by ybabts" -ForegroundColor Green
+Write-Host "---------------------------------------------" -ForegroundColor Green
+Write-Host ""
+Write-Host "This script will download and install the latest version of the EFT Omega Modpack." -ForegroundColor $defaultTextColor
+Write-Host ""
 
 # Check if user has 7-Zip installed
 Write-Host "Checking if 7-Zip is installed..." -ForegroundColor $defaultTextColor
@@ -21,9 +32,12 @@ if (-not $7zipInstalled) {
   Remove-Item -Path $7zipInstaller
 }
 
-# Removes the SPT folder
-Write-Host "Removing the SPT folder..." -ForegroundColor $defaultTextColor
-Remove-Item -Path "./SPT" -Recurse -Force
+# Checks if the SPT folder exists
+if (Test-Path "./SPT") {
+  # Removes the SPT folder
+  Write-Host "Removing the SPT folder..." -ForegroundColor $defaultTextColor
+  Remove-Item -Path "./SPT" -Recurse -Force
+}
 
 # If directory does not exist, create it
 $directories = @(
@@ -40,14 +54,21 @@ foreach ($directory in $directories) {
   Write-Host "Checking if $directory exists..." -ForegroundColor $defaultTextColor
   if (-not (Test-Path $directory)) {
     Write-Host "$directory does not exist. Creating $directory..." -ForegroundColor $defaultTextColor
-    New-Item -ItemType Directory -Path $directory
+    New-Item -ItemType Directory -Path $directory -Force | Out-Null
   }
 }
 
 
 # Fetches the latest version of the modpack
-Write-Host "Fetching latest version of the modpack..." -ForegroundColor $defaultTextColor
-$jsonResponse = Invoke-WebRequest -Uri "https://eftomega.deno.dev/modpack.json" 
+Write-Host "Fetching latest version of the modpack..." -ForegroundColor Green
+try {
+  $jsonResponse = Invoke-WebRequest -Uri "${server}/modpack.json"
+} catch {
+  Write-Host "Error occurred while fetching the modpack: $_" -ForegroundColor Red
+  Write-Host "Press any key to exit..."
+  $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+  exit
+}
 
 # Converts the JSON response to a PowerShell object
 $modpack = $jsonResponse.Content | ConvertFrom-Json
@@ -68,7 +89,7 @@ $dllOnlyMods = $modpack.dllOnlyMods
 # Mod order list
 $modOrder = $modpack.modOrder
 # Config files list
-$configFileUrls = $modpack.configFileUrls
+$config = $modpack.config
 
 # Downloads all the mods in the mod url list
 Write-Host "Downloading mods..." -ForegroundColor $defaultTextColor
@@ -118,9 +139,21 @@ foreach ($dll in $dllOnlyMods) {
 
 # Creates the mod order file
 Write-Host "Creating mod order file..." -ForegroundColor $defaultTextColor
-$modOrder | Out-File -FilePath "./SPT/user/mods/order.json" -Force
+$order = @{"order"=$modOrder} | ConvertTo-Json
+$utf8NoBom = New-Object System.Text.UTF8Encoding $false
+# Notably for JSON files, the BOM isn't valid JSON, so we need to remove it
+[System.IO.File]::WriteAllText("./SPT/user/mods/order.json", $order, $utf8NoBom)
 
-# Asks the user where their SPT folder is located
+# Downloads all the config files
+Write-Host "Downloading config files..." -ForegroundColor $defaultTextColor
+foreach ($configFile in $config.Keys) {
+  $configUrl = $config[$configFile]
+  $configPath = Join-Path -Path "./SPT" -ChildPath $configFile
+  Write-Host "Downloading $configFile..." -ForegroundColor $defaultTextColor
+  Invoke-WebRequest -Uri $configUrl -OutFile $configPath
+}
+
+# Asks the user to select their SPT folder
 Write-Host "Please select your SPT folder..." -ForegroundColor Green
 Add-Type -AssemblyName System.Windows.Forms
 

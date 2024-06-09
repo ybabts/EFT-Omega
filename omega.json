@@ -48,5 +48,7 @@
     "ServerValueModifier",
     "ybabts-stackableitems"
   ],
-  "configFileUrls": []
+  "config": {
+    "/user/mods/SPT-Realism/config/config.json": "https://eftomega.deno.dev/config/spt-realism/config.json"
+  }
 }
