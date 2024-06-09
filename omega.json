@@ -14,7 +14,9 @@
     "https://github.com/CJ-SPT/StashSearch/releases/download/V1.1.1/StashSearch.7z",
     "https://eftomega.deno.dev/mods/ybabts-stackableitems-1.0.0.zip",
     "https://eftomega.deno.dev/mods/ybabts-bettersecurecontainerprogression-1.0.0.zip",
-    "https://github.com/KillerDJLang/Onyx-Secure-Container/releases/download/v1.3.2/Onyx.7z"
+    "https://github.com/KillerDJLang/Onyx-Secure-Container/releases/download/v1.3.2/Onyx.7z",
+    "https://github.com/DrakiaXYZ/SPT-Waypoints/releases/download/1.4.3/DrakiaXYZ-Waypoints-1.4.3.7z",
+    "https://github.com/DrakiaXYZ/SPT-BigBrain/releases/download/0.4.0/DrakiaXYZ-BigBrain-0.4.0_3.8.0.7z"
   ],
   "googleDriveUrls": {
     "ServerValueModifier1.8.3.zip": "https://drive.google.com/uc?export=download&id=1hijGHUYpeLm8vPoPmX2JlGrp6h9JlzXB"
@@ -32,7 +34,9 @@
     "SWAG-Donuts-v3.3.5-SPT380.zip",
     "ybabts-stackableitems-1.0.0.zip",
     "Onyx.7z",
-    "ybabts-bettersecurecontainerprogression-1.0.0.zip"
+    "ybabts-bettersecurecontainerprogression-1.0.0.zip",
+    "DrakiaXYZ-Waypoints-1.4.3.7z",
+    "DrakiaXYZ-BigBrain-0.4.0_3.8.0.7z"
   ],
   "userMods": [
     "ServerValueModifier1.8.3.zip"
@@ -41,6 +45,8 @@
     "InventoryOrganizingFeatures.dll"
   ],
   "modOrder": [
+    "DrakiaXYZ-Waypoints",
+    "DrakiaXYZ-BigBrain",
     "SPT-Realism",
     "zSolarint-SAIN-ServerMod",
     "SWAG",
