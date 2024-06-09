@@ -2,7 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var DbEvaluator_1 = require("./util/DbEvaluator");
 var ItemId_1 = require("./util/constants/ItemId");
-var QuestRewardType_1 = require("@spt-aki/models/enums/QuestRewardType");
 var Mod = /** @class */ (function () {
     function Mod() {
     }
@@ -26,7 +25,7 @@ var Mod = /** @class */ (function () {
                 }
             ],
             "target": "6492e44af4287b13040fc722",
-            "type": QuestRewardType_1.QuestRewardType.ITEM,
+            "type": "Item",
             "unknown": false,
             "value": "1"
         });
@@ -45,7 +44,7 @@ var Mod = /** @class */ (function () {
                 }
             ],
             "target": "6492e44af4287b13040fc722",
-            "type": QuestRewardType_1.QuestRewardType.ITEM,
+            "type": "Item",
             "unknown": false,
             "value": "1"
         });
@@ -64,7 +63,7 @@ var Mod = /** @class */ (function () {
                 }
             ],
             "target": "6492e44af4287b13040fc722",
-            "type": QuestRewardType_1.QuestRewardType.ITEM,
+            "type": "Item",
             "unknown": false,
             "value": "1"
         });
@@ -83,7 +82,7 @@ var Mod = /** @class */ (function () {
                 }
             ],
             "target": "6492e44af4287b13040fc722",
-            "type": QuestRewardType_1.QuestRewardType.ITEM,
+            "type": "Item",
             "unknown": false,
             "value": "1"
         });
@@ -102,7 +101,7 @@ var Mod = /** @class */ (function () {
                 }
             ],
             "target": "6492e44af4287b13040fc722",
-            "type": QuestRewardType_1.QuestRewardType.ITEM,
+            "type": "Item",
             "unknown": false,
             "value": "1"
         });

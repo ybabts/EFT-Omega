@@ -105,6 +105,9 @@
     "/user/mods/SPT-Realism/config/config.json": "https://eftomega.deno.dev/config/SPT-Realism/config.json",
     "/user/mods/ServerValueModifier/Presets/Omega.json": "https://eftomega.deno.dev/config/ServerValueModifier/Omega.json",
     "/user/mods/ServerValueModifier/Loader/loader.json": "https://eftomega.deno.dev/config/ServerValueModifier/loader.json",
-    "/user/mods/OnyxContainer/src/mod.ts": "https://eftomega.deno.dev/config/OnyxContainer/mod.ts"
+    "/user/mods/OnyxContainer/src/mod.ts": "https://eftomega.deno.dev/config/OnyxContainer/mod.ts",
+    "/user/mods/SPT-Realism/db/put_new_stuff_here/SianydesAndACR.json": "https://eftomega.deno.dev/config/SPT-Realism/SianydesAndACR.json",
+    "/user/mods/SPT-Realism/db/put_new_stuff_here/SianydesAndG3iness.json": "https://eftomega.deno.dev/config/SPT-Realism/SianydesAndG3iness.json",
+    "/user/mods/SPT-Realism/db/put_new_stuff_here/SianydesCZScorpion.json": "https://eftomega.deno.dev/config/SPT-Realism/SianydesCZScorpion.json"
   }
 }

@@ -29,7 +29,7 @@ class Mod implements IPostDBLoadMod {
                 }
             ],
             "target": "6492e44af4287b13040fc722",
-            "type": QuestRewardType.ITEM,
+            "type": "Item",
             "unknown": false,
             "value": "1"
         })
@@ -48,7 +48,7 @@ class Mod implements IPostDBLoadMod {
                 }
             ],
             "target": "6492e44af4287b13040fc722",
-            "type": QuestRewardType.ITEM,
+            "type": "Item",
             "unknown": false,
             "value": "1"
         })
@@ -67,7 +67,7 @@ class Mod implements IPostDBLoadMod {
                 }
             ],
             "target": "6492e44af4287b13040fc722",
-            "type": QuestRewardType.ITEM,
+            "type": "Item",
             "unknown": false,
             "value": "1"
         })
@@ -86,7 +86,7 @@ class Mod implements IPostDBLoadMod {
                 }
             ],
             "target": "6492e44af4287b13040fc722",
-            "type": QuestRewardType.ITEM,
+            "type": "Item",
             "unknown": false,
             "value": "1"
         })
@@ -105,7 +105,7 @@ class Mod implements IPostDBLoadMod {
                 }
             ],
             "target": "6492e44af4287b13040fc722",
-            "type": QuestRewardType.ITEM,
+            "type": "Item",
             "unknown": false,
             "value": "1"
         })

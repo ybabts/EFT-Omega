@@ -1,0 +1,18 @@
+{
+    "064a8c271a037b0c6a1b86f5": {
+        "ItemID": "064a8c271a037b0c6a1b86f5",
+        "Name": "ump50mag",
+        "ModType": "",
+        "ReloadSpeed": 5,
+        "Ergonomics": 0,
+        "MagMalfunctionChance": 0.0075,
+        "LoadUnloadModifier": 0,
+        "CheckTimeModifier": 0,
+        "ConflictingItems": [],
+        "Weight": 0.138,
+        "VerticalRecoil": 0,
+        "HorizontalRecoil": 0,
+        "LoyaltyLevel": 0,
+        "Price": 0
+    }
+}
