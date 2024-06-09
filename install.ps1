@@ -1,4 +1,5 @@
 $defaultTextColor = [System.ConsoleColor]::White
+$ProgressPreference = 'SilentlyContinue' # Suppress progress bar  
 
 # Check if user has 7-Zip installed
 Write-Host "Checking if 7-Zip is installed..." -ForegroundColor $defaultTextColor
@@ -9,7 +10,7 @@ if (-not $7zipInstalled) {
   $7zipUrl = "https://www.7-zip.org/a/7z1900-x64.exe"
   $7zipInstaller = "$PWD\7z1900-x64.exe"
   Write-Host "7-Zip is not installed. Downloading 7-Zip..." -ForegroundColor $defaultTextColor
-  Invoke-WebRequest -Uri $7zipUrl -OutFile $7zipInstaller
+  Invoke-WebRequest -Uri $7zipUrl -OutFile $7zipInstaller -NoProgress
 
   # Install 7-Zip
   Write-Host "Running 7-Zip installer..." -ForegroundColor $defaultTextColor
@@ -41,7 +42,7 @@ foreach ($directory in $directories) {
 
 # Fetches the latest version of the modpack
 Write-Host "Fetching latest version of the modpack..." -ForegroundColor $defaultTextColor
-$jsonResponse = Invoke-WebRequest -Uri "https://eftomega.deno.dev/modpack.json"
+$jsonResponse = Invoke-WebRequest -Uri "https://eftomega.deno.dev/modpack.json" 
 
 # Converts the JSON response to a PowerShell object
 $modpack = $jsonResponse.Content | ConvertFrom-Json
