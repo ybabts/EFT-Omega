@@ -152,7 +152,8 @@ foreach ($configFile in $config.Keys) {
   $configUrl = $config[$configFile]
   $configPath = Join-Path -Path "./SPT" -ChildPath $configFile
   $leaf = Split-Path -Leaf $configUrl
-  Write-Host "Downloading $($leaf)..." -ForegroundColor $defaultTextColor
+  $lastFolder = Split-Path -Parent $configUrl | Split-Path -Leaf
+  Write-Host "Downloading $lastFolder/$($leaf)..." -ForegroundColor $defaultTextColor
   Invoke-WebRequest -Uri $configUrl -OutFile $configPath
 }
 
