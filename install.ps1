@@ -60,6 +60,8 @@ $standardFolderStructure = $modpack.standardFolderStructure
 $userMods = $modpack.userMods
 # List of mods that are only DLLs
 $dllOnlyMods = $modpack.dllOnlyMods
+# Mod order list
+$modOrder = $modpack.modOrder
 
 # Downloads all the mods in the mod url list
 Write-Host "Downloading mods..." -ForegroundColor $defaultTextColor
@@ -107,4 +109,65 @@ foreach ($dll in $dllOnlyMods) {
   Move-Item -Path "./downloads/$dll" -Destination "./SPT/BepInEx/plugins" -Force
 }
 
+# Asks the user where their SPT folder is located
+Write-Host "Please select your SPT folder..." -ForegroundColor Yellow
+Add-Type -AssemblyName System.Windows.Forms
+
+$folderBrowser = New-Object System.Windows.Forms.FolderBrowserDialog
+$folderBrowser.Description = "Please select your SPT folder"
+$folderBrowser.RootFolder = [Environment+SpecialFolder]::MyComputer
+
+if ($folderBrowser.ShowDialog() -eq [System.Windows.Forms.DialogResult]::OK) {
+    $SPTFolder = $folderBrowser.SelectedPath
+} else {
+    Write-Host "No folder selected. Exiting script." -ForegroundColor Red
+    Write-Host "Press any key to exit..."
+    $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+    exit
+}
+
+# Checks if the SPT Folder exists
+if (-not (Test-Path $SPTFolder)) {
+  Write-Host "SPT Folder does not exist. Please enter a valid path." -ForegroundColor Red
+  Write-Host "Press any key to exit..."
+  $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+  exit
+}
+
+# Checks if the SPT Folder contains Aki.Launcher.exe and EscapeFromTarkov.exe
+if (-not (Test-Path "$SPTFolder\Aki.Launcher.exe") -or -not (Test-Path "$SPTFolder\EscapeFromTarkov.exe")) {
+  Write-Host "SPT Folder does not contain Aki.Launcher.exe and EscapeFromTarkov.exe. Please enter a valid path." -ForegroundColor Red
+  exit
+}
+
+# Warns the user that they will be removing all mods in that install of SPT
+Write-Host "SPT Folder: $SPTFolder \n" -ForegroundColor Yellow
+Write-Host "-----------------------------------------------------------------------------------------------" -ForegroundColor Red
+Write-Host "Warning: This will remove all mods in your SPT folder. Are you sure you want to continue? (Y/N)" -ForegroundColor Red
+Write-Host "-----------------------------------------------------------------------------------------------" -ForegroundColor Red
+$confirmation = Read-Host "Y/N";
+
+if ($confirmation -ne "Y") {
+  Write-Host "Exiting script..." -ForegroundColor Red
+  Write-Host "Press any key to exit..."
+  $null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+  exit
+}
+
+# Removes all user mods
+Write-Host "Removing all user mods..." -ForegroundColor $defaultTextColor
+Remove-Item -Path "$SPTFolder\user\mods\*" -Recurse -Force
+
+# Removes everything except the spt folder in /bepinex/plugins
+Write-Host "Removing all mods in /bepinex/plugins except spt..." -ForegroundColor $defaultTextColor
+Get-ChildItem -Path "$SPTFolder\BepInEx\plugins\*" -Recurse | Where-Object { $_.Name -ne 'spt' } | Remove-Item -Force -Recurse
+
+
+# Copies the contents of the SPT Folder to the SPT Folder
+Write-Host "Copying contents of SPT Folder to SPT Folder..." -ForegroundColor $defaultTextColor
+Copy-Item -Path "./SPT/*" -Destination $SPTFolder -Recurse -Force
+
 Write-Host "Installation complete! Welcome to Omega!" -ForegroundColor Green
+
+Write-Host "Press any key to exit..."
+$null = $Host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")

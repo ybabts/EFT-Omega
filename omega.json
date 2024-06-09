@@ -35,5 +35,17 @@
   ],
   "dllOnlyMods": [
     "InventoryOrganizingFeatures.dll"
+  ],
+  "modOrder": [
+    "SPT-Realism",
+    "zSolarint-SAIN-ServerMod",
+    "SWAG",
+    "Skwizzy-NoDiscardLimit",
+    "DanW-SPTQuestingBots",
+    "WTT-LittleDrummerBoy",
+    "WTT-PackNStrap",
+    "leaves-bartereconomy",
+    "ServerValueModifier",
+    "ybabts-stackable-items"
   ]
 }
