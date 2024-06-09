@@ -21,6 +21,10 @@ if (-not $7zipInstalled) {
   Remove-Item -Path $7zipInstaller
 }
 
+# Removes the SPT folder
+Write-Host "Removing the SPT folder..." -ForegroundColor $defaultTextColor
+Remove-Item -Path "./SPT" -Recurse -Force
+
 # If directory does not exist, create it
 $directories = @(
   "./downloads",
@@ -39,6 +43,7 @@ foreach ($directory in $directories) {
     New-Item -ItemType Directory -Path $directory
   }
 }
+
 
 # Fetches the latest version of the modpack
 Write-Host "Fetching latest version of the modpack..." -ForegroundColor $defaultTextColor
@@ -113,12 +118,7 @@ foreach ($dll in $dllOnlyMods) {
 
 # Creates the mod order file
 Write-Host "Creating mod order file..." -ForegroundColor $defaultTextColor
-$order = @{"order" = $modOrder}
-$orderJson = $order | ConvertTo-Json
-
-$stream = New-Object System.IO.StreamWriter("./SPT/user/mods/order.json", $false, [System.Text.Encoding]::UTF8)
-$stream.WriteLine($orderJson)
-$stream.Close()
+$modOrder | Out-File -FilePath "./SPT/user/mods/order.json" -Force
 
 # Asks the user where their SPT folder is located
 Write-Host "Please select your SPT folder..." -ForegroundColor Green
