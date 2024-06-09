@@ -204,10 +204,17 @@ if ($confirmation -ne "Y") {
 Write-Host "Removing all user mods..." -ForegroundColor $defaultTextColor
 Remove-Item -Path "$SPTFolder\user\mods\*" -Recurse -Force
 
-# Removes everything except the spt folder in /bepinex/plugins
-Write-Host "Removing all mods in /bepinex/plugins except spt..." -ForegroundColor $defaultTextColor
-Get-ChildItem -Path "$SPTFolder\BepInEx\plugins\*" -Recurse | Where-Object { $_.Name -ne 'spt' } | Remove-Item -Force -Recurse
+# Moves the spt folder from /SPT/BepInEx/plugins to /SPT/BepInEx
+Write-Host "Moving spt folder from /SPT/BepInEx/plugins to /SPT/BepInEx..." -ForegroundColor $defaultTextColor
+Move-Item -Path "$SPTFolder/BepInEx/plugins/spt" -Destination "$SPTFolder/BepInEx" -Force
 
+# Deletes all files in /SPT/BepInEx/plugins
+Write-Host "Deleting all files in /SPT/BepInEx/plugins..." -ForegroundColor $defaultTextColor
+Remove-Item -Path "$SPTFolder/BepInEx/plugins/*" -Recurse -Force
+
+# Moves the spt folder back to /SPT/BepInEx/plugins
+Write-Host "Moving spt folder back to /SPT/BepInEx/plugins..." -ForegroundColor $defaultTextColor
+Move-Item -Path "$SPTFolder/BepInEx/spt" -Destination "$SPTFolder/BepInEx/plugins" -Force
 
 # Copies the contents of the SPT Folder to the SPT Folder
 Write-Host "Copying contents of SPT Folder to SPT Folder..." -ForegroundColor $defaultTextColor

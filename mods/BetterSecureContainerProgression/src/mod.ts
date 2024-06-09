@@ -10,7 +10,6 @@ import { QuestRewardType } from "@spt-aki/models/enums/QuestRewardType";
 
 class Mod implements IPostDBLoadMod {
     public postDBLoad(container: DependencyContainer): void {
-        if (config.enable_mod === false) return;
         const logger = container.resolve<ILogger>("WinstonLogger");
         const databaseServer = container.resolve<DatabaseServer>("DatabaseServer");
         const tables: IDatabaseTables = databaseServer.getTables();

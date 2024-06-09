@@ -1,16 +1,17 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-var DbEvaluator_1 = require("./util/DbEvaluator");
-var ItemId_1 = require("./util/constants/ItemId");
-var QuestRewardType_1 = require("@spt-aki/models/enums/QuestRewardType");
-var Mod = /** @class */ (function () {
-    function Mod() {
-    }
-    Mod.prototype.postDBLoad = function (container) {
-        var logger = container.resolve("WinstonLogger");
-        var databaseServer = container.resolve("DatabaseServer");
-        var tables = databaseServer.getTables();
-        var dbe = new DbEvaluator_1.DbEvaluator(databaseServer);
+const DbEvaluator_1 = require("./util/DbEvaluator");
+const ItemId_1 = __importDefault(require("./util/constants/ItemId"));
+const QuestRewardType_1 = require("@spt-aki/models/enums/QuestRewardType");
+class Mod {
+    postDBLoad(container) {
+        const logger = container.resolve("WinstonLogger");
+        const databaseServer = container.resolve("DatabaseServer");
+        const tables = databaseServer.getTables();
+        const dbe = new DbEvaluator_1.DbEvaluator(databaseServer);
         // Adds secure alpha to Debut
         dbe.getQuest("5936d90786f7742b1420ba5b").rewards.Success.push({
             "findInRaid": true,
@@ -109,7 +110,6 @@ var Mod = /** @class */ (function () {
         // Adds secure onyx to Collector
         dbe.getQuest("5c51aac186f77432ea65c552").rewards.Success[0].items[0]._tpl = "Onyx";
         dbe.getQuest("5c51aac186f77432ea65c552").rewards.Success[0].unknown = false;
-    };
-    return Mod;
-}());
+    }
+}
 module.exports = { mod: new Mod() };

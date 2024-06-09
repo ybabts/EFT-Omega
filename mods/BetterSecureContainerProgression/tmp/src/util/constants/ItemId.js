@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var ItemId = {
+const ItemId = {
     "AMMOBOX_127X55_PS12B_10RND": "648983d6b5a2df1c815a04ec",
     "AMMOBOX_12G_AP20_25RND": "64898838d5b4df6140000a20",
     "AMMOBOX_12G_RIP_5RND": "5c1127d0d174af29be75cf68",

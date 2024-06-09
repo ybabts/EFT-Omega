@@ -1,43 +1,46 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DbEvaluator = void 0;
-var ItemId_1 = require("./constants/ItemId");
-var DbEvaluator = /** @class */ (function () {
-    function DbEvaluator(server) {
+const ItemId_1 = __importDefault(require("./constants/ItemId"));
+class DbEvaluator {
+    server;
+    constructor(server) {
         this.server = server;
     }
-    DbEvaluator.prototype.getTables = function () {
+    getTables() {
         return this.server.getTables();
-    };
-    DbEvaluator.prototype.getItems = function () {
+    }
+    getItems() {
         return this.getTables().templates.items;
-    };
-    DbEvaluator.prototype.getItem = function (item_id) {
+    }
+    getItem(item_id) {
         return this.getItems()[item_id];
-    };
-    DbEvaluator.prototype.isBarterItem = function (item_id) {
+    }
+    isBarterItem(item_id) {
         return this.hasParentRecursive(item_id, ItemId_1.default.BARTER_ITEM);
-    };
-    DbEvaluator.prototype.hasParentRecursive = function (item_id, parent) {
+    }
+    hasParentRecursive(item_id, parent) {
         if (item_id === "" || parent === "")
             return false;
-        var itemsParent = this.getItem(item_id)._parent;
+        const itemsParent = this.getItem(item_id)._parent;
         if (parent === itemsParent)
             return true;
         return this.hasParentRecursive(itemsParent, parent);
-    };
-    DbEvaluator.prototype.isDogtag = function (item_id) {
+    }
+    isDogtag(item_id) {
         return item_id === ItemId_1.default.BARTER_BEAR || item_id === ItemId_1.default.BARTER_USEC;
-    };
-    DbEvaluator.prototype.hasResource = function (item_id) {
+    }
+    hasResource(item_id) {
         return this.getItem(item_id)._props.Resource > 0;
-    };
-    DbEvaluator.prototype.hasDurability = function (item_id) {
+    }
+    hasDurability(item_id) {
         return this.getItem(item_id)._props.Durability > 0;
-    };
-    DbEvaluator.prototype.getQuest = function (quest_id) {
+    }
+    getQuest(quest_id) {
         return this.getTables().templates.quests[quest_id];
-    };
-    return DbEvaluator;
-}());
+    }
+}
 exports.DbEvaluator = DbEvaluator;
