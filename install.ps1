@@ -45,6 +45,7 @@ $directories = @(
   "./SPT",
   "./SPT/BepInEx",
   "./SPT/BepInEx/plugins",
+  "./SPT/BepInEx/config",
   "./SPT/user",
   "./SPT/user/mods"
 )
