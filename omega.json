@@ -13,6 +13,7 @@
     "https://github.com/dwesterwick/SPTQuestingBots/releases/download/0.6.0/DanW-SPTQuestingBots.zip",
     "https://github.com/CJ-SPT/StashSearch/releases/download/V1.1.1/StashSearch.7z",
     "https://eftomega.deno.dev/mods/ybabts-stackableitems-1.0.0.zip",
+    "https://eftomega.deno.dev/mods/ybabts-bettersecurecontainerprogression-1.0.0.zip",
     "https://github.com/KillerDJLang/Onyx-Secure-Container/releases/download/v1.3.2/Onyx.7z"
   ],
   "googleDriveUrls": {
@@ -30,7 +31,8 @@
     "WTT-LittleDrummerBoy.rar",
     "SWAG-Donuts-v3.3.5-SPT380.zip",
     "ybabts-stackableitems-1.0.0.zip",
-    "OnyxContainer"
+    "OnyxContainer",
+    "ybabts-bettersecurecontainerprogression"
   ],
   "userMods": [
     "ServerValueModifier1.8.3.zip"
@@ -49,7 +51,8 @@
     "leaves-bartereconomy",
     "ServerValueModifier",
     "OnyxContainer",
-    "ybabts-stackableitems"
+    "ybabts-stackableitems",
+    "ybabts-bettersecurecontainerprogression"
   ],
   "config": {
     "/user/mods/SPT-Realism/config/config.json": "https://eftomega.deno.dev/config/SPT-Realism/config.json",
