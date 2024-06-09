@@ -109,6 +109,13 @@
     "/user/mods/SPT-Realism/db/put_new_stuff_here/SianydesACR.json": "https://eftomega.deno.dev/config/SPT-Realism/SianydesACR.json",
     "/user/mods/SPT-Realism/db/put_new_stuff_here/WTT-SianydeAndG3iness.json": "https://eftomega.deno.dev/config/SPT-Realism/WTT-SianydeAndG3iness.json",
     "/user/mods/SPT-Realism/db/put_new_stuff_here/SianydesCZScorpion.json": "https://eftomega.deno.dev/config/SPT-Realism/SianydesCZScorpion.json",
-    "/user/mods/SPT-Realism/db/put_new_stuff_here/LittleDrummerBoy.json": "https://eftomega.deno.dev/config/SPT-Realism/LittleDrummerBoy.json"
+    "/user/mods/SPT-Realism/db/put_new_stuff_here/LittleDrummerBoy.json": "https://eftomega.deno.dev/config/SPT-Realism/LittleDrummerBoy.json",
+    "/BlepInEx/config/xyz.drakia.tasklistfixes.cfg": "https://eftomega.deno.dev/config/TaskListFixes/xyz.drakia.tasklistfixes.cfg",
+    "/BlepInEx/config/com.dvize.Donuts.cfg": "https://eftomega.deno.dev/config/Dontus/com.dvize.Donuts.cfg",
+    "/BlepInEx/config/me.skwizzy.lottingbots.cfg": "https://eftomega.deno.dev/config/LootingBots/me.skwizzy.lottingbots.cfg",
+    "/BlepInEx/config/com.DanW.QuestingBots.cfg": "https://eftomega.deno.dev/config/QuestingBots/com.DanW.QuestingBots.cfg",
+    "/user/mods/leaves-bartereconomy/config/config.jsonc": "https://eftomega.deno.dev/config/BarterEconomy/config.jsonc",
+    "/user/mods/WTT-PackNStrap/db/Items/Gear_Belts.json": "https://eftomega.deno.dev/config/PackNStrap/Gear_Belts.json",
+    "/user/mods/WTT-PackNStrap/db/Items/Item_Containers.json": "https://eftomega.deno.dev/config/PackNStrap/Item_Containers.json"
   }
 }
