@@ -22,7 +22,8 @@
     "https://github.com/WelcomeToTarkov/UpInSmoke/releases/download/Release/WTT-UpInSmoke.rar",
     "https://github.com/GrooveypenguinX/HeadVoiceSelector/releases/download/1.03/WTT-HeadVoiceSelector.rar",
     "https://github.com/DrakiaXYZ/SPT-TaskListFixes/releases/download/1.4.0/DrakiaXYZ-TaskListFixes-1.4.0.7z",
-    "https://github.com/Soulztorm/Wara-ModdingStatsHelper/releases/download/1.0.3/Wara-ModdingStatsHelper-1.0.3.zip"
+    "https://github.com/Soulztorm/Wara-ModdingStatsHelper/releases/download/1.0.3/Wara-ModdingStatsHelper-1.0.3.zip",
+    "https://objects.githubusercontent.com/github-production-release-asset-2e65be/764137046/aea4116f-e4de-4e81-913c-0e52e575f9d3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=releaseassetproduction%2F20240609%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240609T101343Z&X-Amz-Expires=300&X-Amz-Signature=0e8e2bb6f96bee8b75f67b8417ac60fc8b04bc198c026828d4713edd35236bae&X-Amz-SignedHeaders=host&actor_id=10294758&key_id=0&repo_id=764137046&response-content-disposition=attachment%3B%20filename%3DSkillsExtended.7z&response-content-type=application%2Foctet-stream"
   ],
   "googleDriveUrls": {
     "ServerValueModifier1.8.3.zip": "https://drive.google.com/uc?export=download&id=1hijGHUYpeLm8vPoPmX2JlGrp6h9JlzXB",
@@ -34,7 +35,8 @@
     "WTT-Armory-HK417.zip": "https://drive.usercontent.google.com/download?id=11_Dl047nhN8mcLBWSxgSmjoRIFMvk9IM&export=download&authuser=0&confirm=t&uuid=0bad5d81-479b-40b9-a20b-19788b6bb1f2&at=APZUnTUszRqnzgfy2MavrkpICORA%3A1717918204101",
     "WTT-Armory-WilsonCombat.zip": "https://drive.usercontent.google.com/download?id=11CZBDUe3xiLbGfJ7sJKCOQQ9DOfDOD5k&export=download&authuser=0",
     "WTT-Armory-SVD.zip": "https://drive.usercontent.google.com/download?id=1SAm1dYBIf5hFcZan78o75ryBqyVeQWGy&export=download&authuser=0&confirm=t&uuid=ac7f521f-56c9-40e9-b566-cb9e48425e9c&at=APZUnTWzlG_ILVqN_io2oiXITzfR%3A1717918906295",
-    "CactusPie.RamCleanerInterval.dll": "https://drive.usercontent.google.com/download?id=1xT0bdTeJJc5AdFdrnlQCr9YULTbs2afO&export=download&authuser=0"
+    "CactusPie.RamCleanerInterval.dll": "https://drive.usercontent.google.com/download?id=1xT0bdTeJJc5AdFdrnlQCr9YULTbs2afO&export=download&authuser=0",
+    "Lyconox-MosinEx-1.1.0.zip": "https://drive.usercontent.google.com/download?id=1JViUkFrGJVUg6Bx1nz33WzFBdpdbhkKq&export=download&authuser=0&confirm=t&uuid=f70d863e-4447-4086-b5ec-081ff34b9407&at=APZUnTUqNM0YedEs5y1br5_Y-ME8%3A1717928120637"
   },
   "standardFolderStructure": [
     "AmandsGraphics.1.6.2.zip",
@@ -65,7 +67,9 @@
     "WTT-UpInSmoke.rar",
     "WTT-HeadVoiceSelector.rar",
     "DrakiaXYZ-TaskListFixes-1.4.0.7z",
-    "Wara-ModdingStatsHelper-1.0.3.zip"
+    "Wara-ModdingStatsHelper-1.0.3.zip",
+    "SkillsExtended.7z",
+    "Lyconox-MosinEx-1.1.0.zip"
   ],
   "userMods": [
     "ServerValueModifier1.8.3.zip"
@@ -86,6 +90,7 @@
     "BRNVG_N-15Adapter",
     "Realistic-Thermals-1.0.3",
     "WTT-UpInSmoke",
+    "Lyconox-MosinEx-1.1.0",
     "WTT-LittleDrummerBoy",
     "WTT-SianydeAndScorpiness",
     "WTT-SianydeAndACRiness",
@@ -95,6 +100,7 @@
     "WTT-Armory-SVD",
     "WTT-PackNStrap",
     "leaves-bartereconomy",
+    "SkillsExtended",
     "ServerValueModifier",
     "WTT-HeadVoiceSelector",
     "OnyxContainer",
