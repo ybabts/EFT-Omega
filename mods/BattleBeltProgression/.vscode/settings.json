@@ -1,0 +1,12 @@
+{
+  "deno.enable": true,
+  "emeraldwalk.runonsave": {
+    "commands": [
+      {
+        "match": "src/(.*).ts$",
+        "isAsync": true,
+        "cmd": "esbuild ./src/${file}.ts --outdir=./src/ --bundle --platform=node --target=es6"
+      }
+    ]
+  }
+}

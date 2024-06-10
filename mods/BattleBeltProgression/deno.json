@@ -1,0 +1,5 @@
+{
+  "tasks": {
+    "build": "esbuild ./src/mod.ts --outdir=./src/ --bundle --platform=node --target=es6"
+  }
+}
