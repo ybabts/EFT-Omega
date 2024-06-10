@@ -123,6 +123,7 @@
     "/BepInEx/config/com.DanW.QuestingBots.cfg": "https://eftomega.deno.dev/config/QuestingBots/com.DanW.QuestingBots.cfg",
     "/user/mods/leaves-bartereconomy/config/config.jsonc": "https://eftomega.deno.dev/config/BarterEconomy/config.jsonc",
     "/user/mods/WTT-PackNStrap/db/Items/Gear_Belts.json": "https://eftomega.deno.dev/config/PackNStrap/Gear_Belts.json",
-    "/user/mods/WTT-PackNStrap/db/Items/Item_Containers.json": "https://eftomega.deno.dev/config/PackNStrap/Item_Containers.json"
+    "/user/mods/WTT-PackNStrap/db/Items/Item_Containers.json": "https://eftomega.deno.dev/config/PackNStrap/Item_Containers.json",
+    "/user/mods/WTT-LittleDrummerBoy/db/Items/Attachment_Magazine.json": "https://eftomega.deno.dev/config/LittleDrummerBoy/Attachment_Magazine.json"
   }
 }
