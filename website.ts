@@ -6,6 +6,7 @@ import { default as omega } from "./omega.json" with { type: "json" }
 const folders = Array.from(Deno.readDirSync("./mods"));
 // for each folder, look in /dist for a .zip file
 const mods = folders.map((folder) => {
+  if (existsSync(`./mods/${folder.name}/dist`) === false) return null;
   const files = Array.from(Deno.readDirSync(`./mods/${folder.name}/dist`));
   const mod = files.find((file) => file.name.endsWith(".zip"));
   if (mod) {
@@ -30,7 +31,7 @@ Deno.serve((req: Request) => {
       return new Response("Mod does not exist", { status: 404 });
     }
     const modFilePath = `./mods/${mod.name}/dist/${mod.file}`;
-    if (existsSync(modFilePath)) {
+    if (existsSync(`./mods/${mod.name}/dist`) && existsSync(modFilePath)) {
       return new Response(Deno.readFileSync(modFilePath), { headers: { "Content-Type": "application/zip" } });
     } else {
       return new Response("Mod does not exist", { status: 404 });
