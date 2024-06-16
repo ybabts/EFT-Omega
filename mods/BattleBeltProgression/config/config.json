@@ -1,0 +1,151 @@
+{
+  "enable": true,
+  "beltIds": {
+    "FANNY_PACK": "f8bd9b5115b176f3343c15ab",
+    "AERO_CORP_PISTOLEER_COMBAT_BELT": "b8c4623858c113c6b723cb00",
+    "CITADEL_INDUSTRIES_GENERAL_PURPOSE_UTILITY_BELT": "8a7a8c543eb5f37e45953549",
+    "COMBAT_SOLUTIONS_POINTMAN_ASSAULT_BELT": "adeebd551b9ad402069733ce",
+    "POLYTECH_ORION_RECON_BELT": "8226ab90fb7f45d8cfa7fc3d",
+    "LH-63_DUTY_BELT": "942b6046d454de2606e23725",
+    "REBEL-9_ASSAULTER_BELT_CAMO": "c473791d93ca36cb24e17ff9",
+    "REBEL-9_ASSAULTER_BELT_OD": "f9a169d09b52ea7b50872357",
+    "BISON_ASSAULTER_BELT": "aa6b05b680b18ae6fe7d8ad9",
+    "MEDIC_BELT": "07e5648876d6b14569c0c1c7",
+    "MRB_GRENADIER_BELT": "37e439bcf48f216b37dd40de",
+    "MRB_VOG_GRENADIER_BELT": "b70d97cc28f80b524ee4ef2f",
+    "GRENADIER_BELT": "60bb3baf34736c0636250b1a",
+    "MARCH_ASSAULTER_BELT": "e4c26a37cb69e8c50c61202f",
+    "MRB_LMG_BELT": "0a3e20a6db18234f8d6f218e",
+    "COMPETITOR_BELT": "f80bdf274d83869039405ef8",
+    "BISON_RIFLEMAN_BELT": "63ac5146862634e578bcb0c9",
+    "FERRO_CONCEPTS_DANGLER": "322eb5a82749d49003e82d98"
+  },
+  "addBeltToQuestRewards": [
+    {
+      "id": "a422fe9f22618cf1b11c1536",
+      "reward_id": "094de80105192352973edfd4",
+      "quest": "",
+      "belt": "FANNY_PACK",
+      "count": 1
+    },
+    {
+      "id": "9f0c3244d7bd1a8dcc4be228",
+      "reward_id": "eafa97ff40c5619e8aa4f168",
+      "quest": "LOYALTY_BUYOUT",
+      "belt": "AERO_CORP_PISTOLEER_COMBAT_BELT",
+      "count": 1
+    },
+    {
+      "id": "8ef406ae64a63866bb44f368",
+      "reward_id": "b4cffdd4be1b982677262cac",
+      "quest": "GUNSMITH_PART_6",
+      "belt": "CITADEL_INDUSTRIES_GENERAL_PURPOSE_UTILITY_BELT",
+      "count": 1
+    },
+    {
+      "id": "e9c5b33e896e534e11e99a26",
+      "reward_id": "f550f6f3feb5e54f82604cf0",
+      "quest": "SEW_IT_GOOD_PART_1",
+      "belt": "COMBAT_SOLUTIONS_POINTMAN_ASSAULT_BELT",
+      "count": 1
+    },
+    {
+      "id": "67eb991cf38e639b2e53ebea",
+      "reward_id": "8542a848393d266b67ef5052",
+      "quest": "WHATS_ON_THE_FLASH_DRIVE",
+      "belt": "POLYTECH_ORION_RECON_BELT",
+      "count": 1
+    },
+    {
+      "id": "3db5c084b0f79f59759041ee",
+      "reward_id": "c9663cfe437386367174c242",
+      "quest": "GRENADIER",
+      "belt": "LH-63_DUTY_BELT",
+      "count": 1
+    },
+    {
+      "id": "2ef91d464627e124199744f9",
+      "reward_id": "9fc9f93900d7d7463e9fa838",
+      "quest": "SPA_TOUR_PART_6",
+      "belt": "REBEL-9_ASSAULTER_BELT_CAMO",
+      "count": 1
+    },
+    {
+      "id": "def74843caee1fce8e3a8d32",
+      "reward_id": "94787c749c43dca22bba6c2a",
+      "quest": "INVENTORY_CHECK",
+      "belt": "REBEL-9_ASSAULTER_BELT_OD",
+      "count": 1
+    },
+    {
+      "id": "310086722c561590477d27d2",
+      "reward_id": "cf0292e2aeee450893083160",
+      "quest": "THE_PUNISHER_PART_5",
+      "belt": "BISON_ASSAULTER_BELT",
+      "count": 1
+    },
+    {
+      "id": "f80027654489b2f86d2627a9",
+      "reward_id": "08013ad7fed91397c4964a69",
+      "quest": "COLLEAGUES_PART_2",
+      "belt": "MEDIC_BELT",
+      "count": 1
+    },
+    {
+      "id": "660d2dca928b0145db5bd261",
+      "reward_id": "1e0828d9b10d4da4d7f81ad8",
+      "quest": "HOT_DELIVERY",
+      "belt": "MRB_GRENADIER_BELT",
+      "count": 1
+    },
+    {
+      "id": "39a104d6aea79c19b7c08b13",
+      "reward_id": "4fa376e391fedfc9965e3610",
+      "quest": "TEST_DRIVE_-_PART_2",
+      "belt": "MRB_VOG_GRENADIER_BELT",
+      "count": 1
+    },
+    {
+      "id": "60fb6b39099589dc515664ea",
+      "reward_id": "70fea3010664d341c08855aa",
+      "quest": "PYRAMID_SCHEME",
+      "belt": "GRENADIER_BELT",
+      "count": 1
+    },
+    {
+      "id": "56e47a099711cc38d561318e",
+      "reward_id": "bb9fca7e5af25ce044c9ca81",
+      "quest": "ATHLETE",
+      "belt": "MARCH_ASSAULTER_BELT",
+      "count": 1
+    },
+    {
+      "id": "aab90e2edd899e2eb4adf0d7",
+      "reward_id": "9f94c4516346a522e1d9fbe9",
+      "quest": "PERFECT_MEDIATOR",
+      "belt": "MRB_LMG_BELT",
+      "count": 1
+    },
+    {
+      "id": "ca0565159f4a0970f9bae055",
+      "reward_id": "71f05712d231f75af6de6042",
+      "quest": "",
+      "belt": "COMPETITOR_BELT",
+      "count": 1
+    },
+    {
+      "id": "1a8509407bce5af77c05c156",
+      "reward_id": "509a2c9ef5903a8af3631537",
+      "quest": "VITAMINS_PART_1",
+      "belt": "BISON_RIFLEMAN_BELT",
+      "count": 1
+    },
+    {
+      "id": "d9cd401a9b00d6d247d2102e",
+      "reward_id": "d083126ce6c47f5d1ab08d65",
+      "quest": "HUMANITARIAN_SUPPLIES",
+      "belt": "FERRO_CONCEPTS_DANGLER",
+      "count": 1
+    }
+  ]
+}

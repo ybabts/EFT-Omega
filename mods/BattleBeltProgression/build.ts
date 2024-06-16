@@ -26,10 +26,15 @@ await esbuild.build({
   bundle: true,
   format: "cjs",
   platform: "node",
-  target: "es6"
+  target: "es6",
+  external: [
+    "../config/config.json",
+  ]
 });
 
 esbuild.stop();
+
+// Installs the mod to local SPT folder
 
 // removes SPT/user/mods/author-modname folder if it exists
 Deno.removeSync(`${sptPath}/user/mods/${mod.author}-${mod.name}`, { recursive: true });
